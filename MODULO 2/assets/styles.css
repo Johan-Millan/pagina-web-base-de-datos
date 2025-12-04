@@ -5,21 +5,22 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Hace que padding/border no aumenten el tamaño total */
 }
 
 :root {
-  --container: 1024px;
-  --radius: 12px;
-  --space-1: .5rem;
-  --space-2: .75rem;
-  --space-3: 1rem;
-  --space-4: 1.5rem;
-  --space-5: 1.75rem;
-  --space-6: 2rem;
+  --container: 1024px; /* Tamaño máximo del contenido */
+  --radius: 12px; /* Radio de bordes redondeados */
+   /* Espaciados (márgenes/paddings) de uso repetido */
+  --space-1: .5rem; 
+  --space-2: .75rem; 
+  --space-3: 1rem; 
+  --space-4: 1.5rem; 
+  --space-5: 1.75rem; 
+  --space-6: 2rem; 
 
-  --fg: #111111;
-  --muted: #6b7280;
+  --fg: #111111; /* Texto principal */
+  --muted: #6b7280; /* Gris suave para textos secundarios */
 
   --border: #e5e7eb;   /* borde claro */
   --bg: #ffffff;       /* fondo general */
@@ -33,27 +34,27 @@
 html { scroll-behavior: smooth; }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell,
-               "Noto Sans", Helvetica, Arial;
-  line-height: 1.6;
+  margin: 0; /* Quita margen por defecto del navegador */
+  background: var(--bg);  /* Fondo blanco */
+  color: var(--fg); /* Texto oscuro */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, 
+               "Noto Sans", Helvetica, Arial; /* Fuente moderna por defecto */
+  line-height: 1.6; /* Altura entre líneas para buena lectura */
 }
 
 /* ---------------------- */
 /* CONTENEDOR GENERAL     */
 /* ---------------------- */
 
-.container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--space-4);
+.container { 
+  max-width: var(--container);  /* Limita el ancho máximo */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 0 var(--space-4);   /* Espaciado interno lateral */
 }
 
 a {
-  color: var(--brand);
-  text-decoration: none;
+  color: var(--brand);  /* Color azul para enlaces */
+  text-decoration: none; /* Quita subrayado */
 }
 
 /* ---------------------- */
@@ -61,19 +62,19 @@ a {
 /* ---------------------- */
 
 .site-header {
-  padding: var(--space-4) 0;
-  border-bottom: 1px solid var(--border);
+  padding: var(--space-4) 0; /* Espacio arriba y abajo */
+  border-bottom: 1px solid var(--border); /* Línea separadora */
 }
 
 .site-title {
-  margin: 0 0 var(--space-2);
-  font-size: 1.75rem;
-  font-weight: 600;
+  margin: 0 0 var(--space-2); /* Quita margen arriba, deja abajo */
+  font-size: 1.75rem; /* Tamaño grande del título */
+  font-weight: 600; /* Seminegrita */
 }
 
 .site-header nav a {
-  margin-right: var(--space-3);
-  font-size: .95rem;
+  margin-right: var(--space-3); /* Separación entre enlaces */
+  font-size: .95rem; /* Tamaño ligeramente pequeño */
 }
 
 /* ---------------------- */
@@ -81,11 +82,11 @@ a {
 /* ---------------------- */
 
 .layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2.5rem;
-  padding-top: var(--space-6);
-  padding-bottom: var(--space-6);
+  display: grid; /* Usamos grid para dividir columnas */
+  grid-template-columns: 2fr 1fr; /* Columna principal (2 partes) + sidebar (1 parte) */
+  gap: 2.5rem;  /* Separación entre columnas */
+  padding-top: var(--space-6); /* Espacio arriba */
+  padding-bottom: var(--space-6); /* Espacio abajo */
 }
 
 /* ---------------------- */
@@ -94,10 +95,10 @@ a {
 
 .card,
 .post {
-  background: #ffffff;
-  padding: var(--space-5);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background: #ffffff; /* Fondo blanco */
+  padding: var(--space-5);  /* Espaciado interno */
+  border: 1px solid var(--border); /* Borde gris claro */
+  border-radius: var(--radius); /* Bordes redondeados */
 
   /* ⭐ SOMBRA SUAVE CASI IMPERCEPTIBLE (idéntica a tu imagen) */
   box-shadow: 0 1px 3px rgba(0,0,0,0.05),
@@ -109,29 +110,29 @@ a {
 /* ---------------------- */
 
 .small {
-  color: var(--muted);
-  font-size: .88rem;
+  color: var(--muted); /* Texto gris suave */
+  font-size: .88rem; /* Tamaño reducido */
 }
 
 h2 {
-  margin-top: 0;
-  margin-bottom: var(--space-2);
-  font-size: 1.5rem;
-  font-weight: 600;
+  margin-top: 0;   /* Quita margen superior */
+  margin-bottom: var(--space-2);  /* Deja espacio abajo */
+  font-size: 1.5rem;  /* Tamaño medio-grande */
+  font-weight: 600;   /* Seminegrita */
 }
 
 h3 {
-  margin-top: var(--space-4);
-  margin-bottom: var(--space-1);
-  font-size: 1.15rem;
+  margin-top: var(--space-4);  /* Espacio arriba */
+  margin-bottom: var(--space-1);  /* Espacio abajo */
+  font-size: 1.15rem;  /* Tamaño mediano */
   font-weight: 600;
 }
 
 blockquote {
-  margin: var(--space-4) 0;
-  padding-left: var(--space-3);
-  border-left: 3px solid var(--border);
-  color: var(--muted);
+  margin: var(--space-4) 0; /* Espacio arriba y abajo */
+  padding-left: var(--space-3); /* Margen interno izquierdo */
+  border-left: 3px solid var(--border); /* Línea vertical decorativa */
+  color: var(--muted); /* Texto gris */
 }
 
 /* ---------------------- */
@@ -139,12 +140,12 @@ blockquote {
 /* ---------------------- */
 
 .site-footer {
-  border-top: 1px solid var(--border);
-  padding: var(--space-4) 0;
+  border-top: 1px solid var(--border); /* Línea arriba */
+  padding: var(--space-4) 0; /* Espacio vertical */
 }
 
 .site-footer .small {
-  color: var(--muted);
-  font-size: .9rem;
+  color: var(--muted);  /* Gris suave */
+  font-size: .9rem; /* Texto pequeño */
 }
 
