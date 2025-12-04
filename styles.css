@@ -1,92 +1,92 @@
+/* ----- Estilo general del body ----- */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  color: #333;
+  font-family: Arial, Helvetica, sans-serif; /* Tipo de letra */
+  margin: 0; /* Quita margen por defecto del navegador */
+  padding: 0; /* Quita padding por defecto */
+  background: #f5f5f5; /* Fondo gris claro */
+  color: #333; /* Color del texto */
 }
 
-/* Contenedor principal */
+/* ----- Contenedor principal ----- */
 main {
-  width: 90%;
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 90%; /* Ancho del contenido */
+  max-width: 900px; /* Evita que sea muy grande en pantallas grandes */
+  margin: auto; /* Centra el contenido en la página */
+  background: white; /* Fondo blanco del contenido */
+  padding: 20px; /* Espacio interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Sombra suave */
 }
 
-/* ====== TITULOS ====== */
+/* ----- TITULOS h1, h2, h3 ----- */
 h1, h2, h3 {
-  text-align: center;
-  color: #1a73e8; /* Azul lindo */
+  text-align: center; /* Centra los títulos */
+  color: #1a73e8; /* Azul bonito */
 }
 
+/* Estilo especial para h1 */
 h1 {
-  border-bottom: 3px solid #1a73e8;
-  padding-bottom: 10px;
+  border-bottom: 3px solid #1a73e8; /* Línea azul debajo del título */
+  padding-bottom: 10px; /* Espacio entre el texto y la línea */
+  margin-bottom: 20px; /* Espacio debajo del título */
 }
 
-/* ====== PÁRRAFOS ====== */
+/* ----- Párrafos ----- */
 p {
-  line-height: 1.6;
+  line-height: 1.6; /* Más espacio entre renglones */
+  font-size: 16px; /* Tamaño cómodo de lectura */
+  margin-bottom: 15px; /* Espacio entre párrafos */
 }
 
-/* ====== ENLACES ====== */
+/* ----- Enlaces ----- */
 a {
-  color: #e63946;
-  text-decoration: none;
-  font-weight: bold;
+  color: #e63946; /* Rojo elegante */
+  text-decoration: none; /* Quita el subrayado */
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado cuando el mouse pasa encima */
 }
 
-/* ====== GALERÍA DE IMÁGENES ====== */
-section img {
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  transition: transform .2s ease;
+/* ----- Imágenes ----- */
+img {
+  border-radius: 10px; /* Bordes redondeados */
+  margin: 10px; /* Espacio alrededor de cada imagen */
+  transition: transform 0.2s; /* Animación suave al hacer hover */
 }
 
-section img:hover {
-  transform: scale(1.06);
+img:hover {
+  transform: scale(1.05); /* Zoom suave al pasar el mouse */
 }
 
-/* ====== LISTAS ====== */
+/* ----- Listas ----- */
 ul {
-  background: #eef4ff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding-left: 20px; /* Mover lista hacia la derecha */
 }
 
 li {
-  margin: 5px 0;
+  margin-bottom: 8px; /* Espacio entre elementos de lista */
 }
 
-/* ====== FIGURA ====== */
+/* ----- Figuras (imagen + texto) ----- */
 figure {
-  text-align: center;
+  text-align: center; /* Centra la imagen y el texto */
+  margin-top: 20px; /* Espacio hacia arriba */
 }
 
 figcaption {
-  margin-top: 8px;
-  font-style: italic;
+  font-style: italic; /* Texto en cursiva */
+  margin-top: 5px; /* Separar texto de la imagen */
 }
 
-/* ====== FOOTER ====== */
+/* ----- Footer ----- */
 footer {
-  text-align: center;
-  padding: 15px;
-  margin-top: 30px;
-  background: #1a73e8;
-  color: white;
+  text-align: center; /* Centrar contenido del footer */
+  margin-top: 30px; /* Separación del contenido principal */
+  padding: 15px; /* Espacio interno */
+  color: #555; /* Gris medio */
 }
 
 footer a {
-  color: #ffeb3b;
+  color: #1a73e8; /* Azul */
 }
